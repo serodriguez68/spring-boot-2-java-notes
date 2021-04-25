@@ -1,4 +1,4 @@
-package com.sergio.learningspring.business.service;
+package com.sergio.learningspring.business.services;
 
 import com.sergio.learningspring.business.domain.RoomReservation;
 import com.sergio.learningspring.data.entity.Guest;
@@ -45,7 +45,7 @@ public class ReservationService {
         This is just sample code that could be simplified by using other Spring Data features not shown in this
         tutorial */
         Iterable<Room> rooms = this.roomRepository.findAll();
-        Map<Long, RoomReservation> roomReservationMap = new HashMap<Long, RoomReservation>();
+        Map<Long, RoomReservation> roomReservationMap = new HashMap<>();
         rooms.forEach(room -> {
             RoomReservation roomReservation = new RoomReservation();
             roomReservation.setRoomId(room.getRoomId());

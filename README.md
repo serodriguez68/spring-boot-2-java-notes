@@ -28,3 +28,29 @@
 - The Bean factory holds the handles to all injectable dependencies and
   manages the dependencies' lifecycle.
 - By default, Spring serves singletons of injectable dependencies.
+
+# Chapter 4: Web Pages with Spring: Spring Web and template rendering
+- The web functionality in Spring is given by the Spring Web dependency.
+- The controller is the heart of Spring Web, both for web pages and web
+  APIs.
+- In spring, the controller is nothing more than a POJO that is
+  decorated with annotations.
+  - Annotations make the controller a bean that is managed by the IoC
+    container.
+  - Annotations allow some functionalities like routing to be Aspected in
+    (aka servlet mapping).
+- When controllers finish the job, they either output raw data or a
+  view.
+- HTML template engines:
+  - Multiple are supported
+  - Thymeleaf is the most popular one.
+
+## MVC in Spring Web
+In Spring web, MVC refers to something slightly different than in for
+example Rails MVC.
+- The "Controller" is equivalent to the controller in Rails.
+- The "View" refers to the STATIC part of the HTML template.
+- The "Model" refers to the DYNAMIC part of the view. This is the main
+  difference with Rails models. In Spring a Model (view model) is only
+  there to represent the dynamic data of the View and is SEPARATE from
+  the entities. In Rails, models are Entities.
