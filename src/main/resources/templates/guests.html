@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Landon Reservations</title>
+    <title>Landon Guests</title>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -26,27 +26,18 @@
 </nav>
 <div class="container">
     <div class="page-header">
-        <h1>Welcome to the Reservations Page</h1>
+        <h1>Welcome to the Guests Page</h1>
     </div>
-    <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-calendar"
-                                                                aria-hidden="true"></span></span>
-        <input type="text" class="form-control" id="datepicker" aria-describedby="basic-addon1"/>
-    </div>
-
     <table class="table table-striped table-bordered">
         <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Email</td>
+            <td>Room</td>
+            <td>Room Number</td>
+            <td>Guest Email</td>
         </tr>
-
-        <tr th:each="roomReservation: ${roomReservations}">
-            <td th:text="${roomReservation.roomName}">Dummy Room Name</td>
-            <td th:text="${roomReservation.roomNumber}">Dummy Room Number</td>
-            <td th:text="${roomReservation.lastName}!=null? ${roomReservation.lastName} + ', ' + ${roomReservation.firstName} : 'VACANT'">
-                Who holds the reservation
-            </td>
+        <tr th:each="guest: ${guestList}">
+            <td th:text="${guest.guestId}">Dummy guest ID</td>
+            <td th:text="${guest.lastName} + ', ' + ${guest.firstName}">Dummy, Name</td>
+            <td th:text="${guest.getEmailAddress()}">Dummy Email</td>
         </tr>
     </table>
 </div>

@@ -24,7 +24,7 @@ public class RoomReservationWebController {
     }
 
     @GetMapping
-    public String getReservations(@RequestParam(value = "date", required = false)String dateString, Model viewModel) {
+    public String getReservations(@RequestParam(value = "date", required = false) String dateString, Model viewModel) {
         Date date = DateUtils.createDateFromDateString(dateString);
         List<RoomReservation> roomReservations = this.reservationService.getRoomReservationsForDate(date);
         /* Model here is a Spring View Model class */

@@ -4,7 +4,6 @@ import com.sergio.learningspring.business.domain.RoomReservation;
 import com.sergio.learningspring.data.entity.Guest;
 import com.sergio.learningspring.data.entity.Reservation;
 import com.sergio.learningspring.data.entity.Room;
-import com.sergio.learningspring.data.repositories.GuestRepository;
 import com.sergio.learningspring.data.repositories.ReservationRepository;
 import com.sergio.learningspring.data.repositories.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,6 @@ import java.util.Map;
 public class ReservationService {
     /* They are marked as final because once the the injected dependency is set, they should not change */
     private final RoomRepository roomRepository;
-    private final GuestRepository guestRepository;
     private final ReservationRepository reservationRepository;
 
     /* If you only have one constructor, you do not need to specify this. However this makes it explicit that this is
@@ -34,9 +32,8 @@ public class ReservationService {
     * one can be @Autowired. */
     @Autowired
     /* The constructor is used by Spring to inject the dependencies */
-    public ReservationService(RoomRepository roomRepository, GuestRepository guestRepository, ReservationRepository reservationRepository) {
+    public ReservationService(RoomRepository roomRepository, ReservationRepository reservationRepository) {
         this.roomRepository = roomRepository;
-        this.guestRepository = guestRepository;
         this.reservationRepository = reservationRepository;
     }
 
