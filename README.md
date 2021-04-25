@@ -54,3 +54,12 @@ example Rails MVC.
   difference with Rails models. In Spring a Model (view model) is only
   there to represent the dynamic data of the View and is SEPARATE from
   the entities. In Rails, models are Entities.
+
+# Chapter 5: Exposing RESTful Endpoints with @RestController
+- For JSON endpoints Spring MVC still makes sense. We just need a to use
+  a JSON "view" instead of an HTML one.
+- Spring automatically does the JSON marshaling and unmarshalling for
+  you.
+- XML endpoints are also available via a simple configuration.
+- @RestController vs @Controller: The @ResponseBody annotation allows
+  for JSON or XML Mapping of the Response Object.
