@@ -10,6 +10,8 @@ The generic argument it takes are: CrudRepository<InvolvedEntity, ClassOfId>
 By doing this wiring, we get a bunch of working methods (behaviour) for free. Spring data makes the automatic
 behaviour of repositories available in the interface by using Aspecting.
 @see https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
+
+ There are others interfaces that our repositories can extend from, like JPARepositories.
  */
 @Repository
 public interface RoomRepository extends CrudRepository<Room, Long> {

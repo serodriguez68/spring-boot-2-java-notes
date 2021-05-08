@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 import java.util.List;
 
+/*
+ @RestController is the annotation used to build web-services (apis)
+ It enables the controllers to change the format of the response based on the content type of the request.
+ It also enables automatic unmarshalling/marshalling of JSON / XML for the request and response
+*/
 @RestController
 @RequestMapping("api/reservations")
 public class RoomReservationWebServiceController {

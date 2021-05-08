@@ -57,9 +57,14 @@ example Rails MVC.
 
 # Chapter 5: Exposing RESTful Endpoints with @RestController
 - For JSON endpoints Spring MVC still makes sense. We just need a to use
-  a JSON "view" instead of an HTML one.
-- Spring automatically does the JSON marshaling and unmarshalling for
-  you.
+  a JSON or XML "view" instead of an HTML one.
+- The content type of the request determines the type of the response.
+- Spring automatically does the JSON / XML marshaling and unmarshalling
+  for you.
 - XML endpoints are also available via a simple configuration.
-- @RestController vs @Controller: The @ResponseBody annotation allows
-  for JSON or XML Mapping of the Response Object.
+- @RestController vs @Controller:
+  - Use @Controller for web pages and @RestController for Web Services
+    (APIs)
+  - The @RestController annotation contains the @ResponseBody
+    annotation, which allows for JSON or XML Mapping of the Response
+    Object.
