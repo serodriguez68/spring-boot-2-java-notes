@@ -65,3 +65,13 @@ This repo contains 3 things:
     + [Actuator Extension](/notes/spring-boot-2-essential-training.md#actuator-extension)
   * [Custom Spring Boot Starters](/notes/spring-boot-2-essential-training.md#custom-spring-boot-starters)
     + [High level steps for creating a custom Spring Boot starter](/notes/spring-boot-2-essential-training.md#high-level-steps-for-creating-a-custom-spring-boot-starter)
+
+## To run the sample application
+
+1. `cd ./bin` > `./start_postgres.sh` to run postgres inside a docker
+   container
+2. Set the IntelliJ Runner environment variable to
+   `spring.profiles.active=dev`
+3. Run the application
+4. Visit `localhost:8000`
+5. Use the credentials `user` and `password` to log in.
