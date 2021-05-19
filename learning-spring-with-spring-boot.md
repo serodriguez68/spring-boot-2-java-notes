@@ -1,4 +1,11 @@
-# Notes from the videos
+# Learning Spring With Spring Boot
+
+This file contains some notes from the LinkedIn Learning Course
+[Learning Spring with Spring Boot](https://www.linkedin.com/learning/me/completed?trk=nav_neptune_learning&u=2094516).
+
+Some important parts from that course are noted here, but some other
+bits are also registered as comments in the sample application in this
+project.
 
 
 # Chapter 2: Spring Data
