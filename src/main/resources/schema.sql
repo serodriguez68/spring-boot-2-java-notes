@@ -3,6 +3,9 @@
 -- This happens just by virtue of the file existing in resources and have schema.sql as a name.
 -- If you are going to use this you also need to set `spring.jpa.hibernate.ddl-auto=none` in application.properties
 -- More info: https://www.baeldung.com/spring-boot-data-sql-and-schema-sql
+-- By default auto initialization of the DB only works for in-memory (embedded) databases.
+--   If you want it to work with a non embedded database like Postgres, you need to add `sql.init.mode=always`
+--   to your `application.properties` or `application.yaml`
 
 CREATE TABLE ROOM(
   ROOM_ID BIGINT AUTO_INCREMENT PRIMARY KEY,

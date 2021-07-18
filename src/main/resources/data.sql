@@ -1,6 +1,9 @@
 -- Seed data that is auto picked up by Spring boot.
 -- Auto pick up happens just by putting this withing resources with the name data.sql.
 -- More info: https://www.baeldung.com/spring-boot-data-sql-and-schema-sql
+-- By default auto initialization of the DB only works for in-memory (embedded) databases.
+--   If you want it to work with a non embedded database like Postgres, you need to add `sql.init.mode=always`
+--   to your `application.properties` or `application.yaml`
 
 INSERT INTO ROOM (NAME, ROOM_NUMBER, BED_INFO) VALUES ('Piccadilly', 'P1', '1Q');
 INSERT INTO ROOM (NAME, ROOM_NUMBER, BED_INFO) VALUES ('Piccadilly', 'P2', '1Q');
