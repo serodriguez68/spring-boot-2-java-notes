@@ -23,7 +23,7 @@ import java.util.Map;
 *   */
 @Service
 public class ReservationService {
-    /* They are marked as final because once the the injected dependency is set, they should not change */
+    /* They are marked as final because once the injected dependency is set, they should not change */
     private final RoomRepository roomRepository;
     private final ReservationRepository reservationRepository;
 
