@@ -29,7 +29,7 @@ spring:
     # We are using ./bin/start_postgres.sh to run postgres inside a docker container
     platform: postgres
     url: jdbc:postgresql://localhost:5432/dev
-    # SECRETS! In real life you would NOT put this in plain text here. Use Env vars or secrete managers.
+    # SECRETS! In real life you would NOT put this in plain text here. Use Env vars or secret managers.
     username: postgres
     password: postgres
 
